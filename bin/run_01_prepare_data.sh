@@ -1,7 +1,7 @@
 # Parameters
 # Clone repo https://github.com/darraghdog/rsna and set the location as ROOT directory
-ROOT='/mnt/lsf/share/dhanley2/rsna'
-ROOT='/data/submit/rsna'
+#ROOT='/mnt/lsf/share/dhanley2/rsna'
+ROOT='/mnt/d/Kaggle/ICT_2'
 RAW_DATA_DIR=$ROOT/data/raw
 CLEAN_DATA_DIR=$ROOT/data
 CKPTDIR=$ROOT/checkpoints
@@ -25,7 +25,7 @@ cd $ROOT
 
 # Unzip competition data 
 cd $RAW_DATA_DIR
-unzip -qq rsna-intracranial-hemorrhage-detection.zip
+#unzip -qq rsna-intracranial-hemorrhage-detection.zip
 cd $ROOT
 
 # Copy csv files to data directory
@@ -33,5 +33,5 @@ unzip $RAW_DATA_DIR/*.csv*
 cp $RAW_DATA_DIR/*.csv* $CLEAN_DATA_DIR/
 
 # Prepare images and metadata
-python scripts/prepare_meta_dicom.py
-python scripts/prepare_folds.py
+#python scripts/prepare_meta_dicom.py
+#python scripts/prepare_folds.py

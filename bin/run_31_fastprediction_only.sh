@@ -4,17 +4,17 @@ FOLD=1
 SIZE='480'
 
 # Download pretrained embeddings for stage 1 only (25 minutes with fast connection - 16GB file )
-pip install gdown
-gdown https://drive.google.com/uc?id=13hqPFdCjoMxtAwF863J3Dk33TcBN_wie -O resnext101v12fold1.tar.gz
-gunzip resnext101v12fold1.tar.gz
-tar -xvf resnext101v12fold1.tar
+#pip install gdown
+#gdown https://drive.google.com/uc?id=13hqPFdCjoMxtAwF863J3Dk33TcBN_wie -O resnext101v12fold1.tar.gz
+#gunzip resnext101v12fold1.tar.gz
+#tar -xvf resnext101v12fold1.tar
 
 # Download stage 1 test and train data files
-cd resnext101v12fold1/
-gdown https://drive.google.com/uc?id=1Fbx3PQHRmJZFc1VNuLKKnnuNUxF1dLe0
-gdown https://drive.google.com/uc?id=1XpNW6axRXTfDjLEUD2p48Kro-eZRdO-k
-gdown https://drive.google.com/uc?id=15H0b0Ce_3SrvefC22fszekBibGDYEefs
-gdown https://drive.google.com/uc?id=1KcF51RnQpSjCBgNzbI4UX2EaUfOS1zHq
+#cd resnext101v12fold1/
+#gdown https://drive.google.com/uc?id=1Fbx3PQHRmJZFc1VNuLKKnnuNUxF1dLe0
+#gdown https://drive.google.com/uc?id=1XpNW6axRXTfDjLEUD2p48Kro-eZRdO-k
+#gdown https://drive.google.com/uc?id=15H0b0Ce_3SrvefC22fszekBibGDYEefs
+#3gdown https://drive.google.com/uc?id=1KcF51RnQpSjCBgNzbI4UX2EaUfOS1zHq
 cd ../
 
 # Run LSTM for each of the epochs (~1 hour)

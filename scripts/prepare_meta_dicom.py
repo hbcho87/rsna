@@ -115,9 +115,9 @@ def generate_df(base, files):
     
     return df
 
-DATAPATH = 'data'
-TRAIN_DIR = os.path.join(DATAPATH, 'raw/stage_2_train_images')
-TEST_DIR = os.path.join(DATAPATH, 'raw/stage_2_test_images')
+DATAPATH = '../data'
+TRAIN_DIR = os.path.join(DATAPATH, 'raw/stage_2_train')
+TEST_DIR = os.path.join(DATAPATH, 'raw/stage_2_test')
 PATHPROC = os.path.join(DATAPATH, 'proc')
 
 logger.info('Create test meta files')
