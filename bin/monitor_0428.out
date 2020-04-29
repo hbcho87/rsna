@@ -1,0 +1,247 @@
+2020-04-28 19:54:22,916 - Rsna-lb-480-fp16 - INFO - Cuda set up : time 19:54:22.916548
+2020-04-28 19:54:23,030 - Rsna-lb-480-fp16 - INFO - Device : GeForce GTX 1080 Ti
+2020-04-28 19:54:23,031 - Rsna-lb-480-fp16 - INFO - Cuda available : True
+2020-04-28 19:54:23,031 - Rsna-lb-480-fp16 - INFO - Cuda n_gpus : 5
+2020-04-28 19:54:23,031 - Rsna-lb-480-fp16 - INFO - Load params : time 19:54:23.031195
+2020-04-28 19:54:23,031 - Rsna-lb-480-fp16 - INFO - seed                1234
+2020-04-28 19:54:23,031 - Rsna-lb-480-fp16 - INFO - fold                6
+2020-04-28 19:54:23,031 - Rsna-lb-480-fp16 - INFO - nbags               0
+2020-04-28 19:54:23,031 - Rsna-lb-480-fp16 - INFO - epochs              3
+2020-04-28 19:54:23,031 - Rsna-lb-480-fp16 - INFO - start               0
+2020-04-28 19:54:23,031 - Rsna-lb-480-fp16 - INFO - batchsize           64
+2020-04-28 19:54:23,031 - Rsna-lb-480-fp16 - INFO - rootpath            /data/hbcho/rsna-master/
+2020-04-28 19:54:23,031 - Rsna-lb-480-fp16 - INFO - imgpath             ../data/proc/
+2020-04-28 19:54:23,031 - Rsna-lb-480-fp16 - INFO - workpath            ../scripts/resnext101v03
+2020-04-28 19:54:23,031 - Rsna-lb-480-fp16 - INFO - weightsname         weights/model_512_resnext1016.bin
+2020-04-28 19:54:23,031 - Rsna-lb-480-fp16 - INFO - lr                  0.00002
+2020-04-28 19:54:23,031 - Rsna-lb-480-fp16 - INFO - logmsg              Rsna-lb-480-fp16
+2020-04-28 19:54:23,031 - Rsna-lb-480-fp16 - INFO - size                480
+2020-04-28 19:54:23,031 - Rsna-lb-480-fp16 - INFO - infer               TRN
+2020-04-28 19:54:23,031 - Rsna-lb-480-fp16 - INFO - wtsize              999
+2020-04-28 19:54:23,031 - Rsna-lb-480-fp16 - INFO - hflip               F
+2020-04-28 19:54:23,031 - Rsna-lb-480-fp16 - INFO - transpose           F
+2020-04-28 19:54:23,032 - Rsna-lb-480-fp16 - INFO - stage2              F
+2020-04-28 19:54:23,032 - Rsna-lb-480-fp16 - INFO - autocrop            T
+sh: 1: /data/hbcho/rsna-master/data/mount: not found
+2020-04-28 19:54:23,041 - Rsna-lb-480-fp16 - INFO - 32512
+2020-04-28 19:54:23,042 - Rsna-lb-480-fp16 - INFO - Load Dataframes
+2020-04-28 19:54:24,115 - Rsna-lb-480-fp16 - INFO - Trn shape 752803 9
+2020-04-28 19:54:24,115 - Rsna-lb-480-fp16 - INFO - Tst shape 121232 2
+2020-04-28 19:54:24,115 - Rsna-lb-480-fp16 - INFO - Processed img path : /data/hbcho/rsna-master/data/proc/**.jpg
+2020-04-28 19:54:29,774 - Rsna-lb-480-fp16 - INFO - Count of pngs : 874034
+2020-04-28 19:54:31,969 - Rsna-lb-480-fp16 - INFO - Number of images to train on 752802
+2020-04-28 19:54:34,572 - Rsna-lb-480-fp16 - INFO - Trn shape 752802 9
+2020-04-28 19:54:35,126 - Rsna-lb-480-fp16 - INFO - Trn shape 752802 9
+2020-04-28 19:54:35,126 - Rsna-lb-480-fp16 - INFO - Val shape 1000 9
+2020-04-28 19:54:40,077 - Rsna-lb-480-fp16 - INFO - Epoch 0/2
+2020-04-28 19:54:40,077 - Rsna-lb-480-fp16 - INFO - ----------
+Data path : /data/hbcho/rsna-master/data
+Image path : /data/hbcho/rsna-master/../data/proc/
+Selected optimization level O1:  Insert automatic casts around Pytorch functions and Tensor methods.
+
+Defaults for this optimization level are:
+enabled                : True
+opt_level              : O1
+cast_model_type        : None
+patch_torch_functions  : True
+keep_batchnorm_fp32    : None
+master_weights         : None
+loss_scale             : dynamic
+Processing user overrides (additional kwargs that are not None)...
+After processing overrides, optimization options are:
+enabled                : True
+opt_level              : O1
+cast_model_type        : None
+patch_torch_functions  : True
+keep_batchnorm_fp32    : None
+master_weights         : None
+loss_scale             : dynamic
+Warning:  multi_tensor_applier fused unscale kernel is unavailable, possibly because apex was installed without --cuda_ext --cpp_ext. Using Python fallback.  Original ImportError was: ModuleNotFoundError("No module named 'amp_C'",)
+2020-04-28 19:54:43,349 - Rsna-lb-480-fp16 - INFO - Train step 0 of 11763
+2020-04-28 20:27:03,042 - Rsna-lb-480-fp16 - INFO - Train step 1000 of 11763
+2020-04-28 20:57:49,546 - Rsna-lb-480-fp16 - INFO - Train step 2000 of 11763
+2020-04-28 21:27:51,562 - Rsna-lb-480-fp16 - INFO - Train step 3000 of 11763
+2020-04-28 21:57:54,261 - Rsna-lb-480-fp16 - INFO - Train step 4000 of 11763
+2020-04-28 22:28:00,162 - Rsna-lb-480-fp16 - INFO - Train step 5000 of 11763
+2020-04-28 22:57:48,771 - Rsna-lb-480-fp16 - INFO - Train step 6000 of 11763
+2020-04-28 23:27:20,464 - Rsna-lb-480-fp16 - INFO - Train step 7000 of 11763
+2020-04-28 23:56:54,254 - Rsna-lb-480-fp16 - INFO - Train step 8000 of 11763
+2020-04-29 00:26:22,649 - Rsna-lb-480-fp16 - INFO - Train step 9000 of 11763
+2020-04-29 00:55:42,657 - Rsna-lb-480-fp16 - INFO - Train step 10000 of 11763
+2020-04-29 01:25:04,400 - Rsna-lb-480-fp16 - INFO - Train step 11000 of 11763
+2020-04-29 01:47:34,688 - Rsna-lb-480-fp16 - INFO - Training Loss: 0.0862
+Gradient overflow.  Skipping step, loss scaler 0 reducing loss scale to 65536.0
+Gradient overflow.  Skipping step, loss scaler 0 reducing loss scale to 65536.0
+Gradient overflow.  Skipping step, loss scaler 0 reducing loss scale to 65536.0
+Traceback (most recent call last):
+  File "scripts/trainorig.py", line 319, in <module>
+    torch.save(model.state_dict(), output_model_file)
+  File "/home/hbcho/anaconda3/envs/torch_110/lib/python3.6/site-packages/torch/serialization.py", line 224, in save
+    return _with_file_like(f, "wb", lambda f: _save(obj, f, pickle_module, pickle_protocol))
+  File "/home/hbcho/anaconda3/envs/torch_110/lib/python3.6/site-packages/torch/serialization.py", line 147, in _with_file_like
+    f = open(f, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/data/hbcho/rsna-master/../scripts/resnext101v03/weights/model_480_epoch0_fold6.bin'
+2020-04-29 01:47:38,240 - Rsna-lb-480-fp16 - INFO - Cuda set up : time 01:47:38.240303
+2020-04-29 01:47:38,296 - Rsna-lb-480-fp16 - INFO - Device : GeForce GTX 1080 Ti
+2020-04-29 01:47:38,296 - Rsna-lb-480-fp16 - INFO - Cuda available : True
+2020-04-29 01:47:38,296 - Rsna-lb-480-fp16 - INFO - Cuda n_gpus : 5
+2020-04-29 01:47:38,296 - Rsna-lb-480-fp16 - INFO - Load params : time 01:47:38.296924
+2020-04-29 01:47:38,297 - Rsna-lb-480-fp16 - INFO - seed                1234
+2020-04-29 01:47:38,297 - Rsna-lb-480-fp16 - INFO - fold                6
+2020-04-29 01:47:38,297 - Rsna-lb-480-fp16 - INFO - nbags               0
+2020-04-29 01:47:38,297 - Rsna-lb-480-fp16 - INFO - epochs              3
+2020-04-29 01:47:38,297 - Rsna-lb-480-fp16 - INFO - start               0
+2020-04-29 01:47:38,297 - Rsna-lb-480-fp16 - INFO - batchsize           64
+2020-04-29 01:47:38,297 - Rsna-lb-480-fp16 - INFO - rootpath            /data/hbcho/rsna-master/
+2020-04-29 01:47:38,297 - Rsna-lb-480-fp16 - INFO - imgpath             ../data/proc/
+2020-04-29 01:47:38,297 - Rsna-lb-480-fp16 - INFO - workpath            ../scripts/resnext101v03
+2020-04-29 01:47:38,297 - Rsna-lb-480-fp16 - INFO - weightsname         weights/model_512_resnext1016.bin
+2020-04-29 01:47:38,297 - Rsna-lb-480-fp16 - INFO - lr                  0.00002
+2020-04-29 01:47:38,297 - Rsna-lb-480-fp16 - INFO - logmsg              Rsna-lb-480-fp16
+2020-04-29 01:47:38,297 - Rsna-lb-480-fp16 - INFO - size                480
+2020-04-29 01:47:38,297 - Rsna-lb-480-fp16 - INFO - infer               EMB
+2020-04-29 01:47:38,297 - Rsna-lb-480-fp16 - INFO - wtsize              999
+2020-04-29 01:47:38,297 - Rsna-lb-480-fp16 - INFO - hflip               F
+2020-04-29 01:47:38,297 - Rsna-lb-480-fp16 - INFO - transpose           F
+2020-04-29 01:47:38,297 - Rsna-lb-480-fp16 - INFO - stage2              F
+2020-04-29 01:47:38,297 - Rsna-lb-480-fp16 - INFO - autocrop            T
+sh: 1: /data/hbcho/rsna-master/data/mount: not found
+2020-04-29 01:47:38,326 - Rsna-lb-480-fp16 - INFO - 32512
+2020-04-29 01:47:38,327 - Rsna-lb-480-fp16 - INFO - Load Dataframes
+2020-04-29 01:47:39,491 - Rsna-lb-480-fp16 - INFO - Trn shape 752803 9
+2020-04-29 01:47:39,492 - Rsna-lb-480-fp16 - INFO - Tst shape 121232 2
+2020-04-29 01:47:39,492 - Rsna-lb-480-fp16 - INFO - Processed img path : /data/hbcho/rsna-master/data/proc/**.jpg
+2020-04-29 01:47:43,964 - Rsna-lb-480-fp16 - INFO - Count of pngs : 874034
+2020-04-29 01:47:44,362 - Rsna-lb-480-fp16 - INFO - Number of images to train on 752802
+2020-04-29 01:47:45,666 - Rsna-lb-480-fp16 - INFO - Trn shape 752802 9
+2020-04-29 01:47:45,809 - Rsna-lb-480-fp16 - INFO - Trn shape 752802 9
+2020-04-29 01:47:45,809 - Rsna-lb-480-fp16 - INFO - Val shape 1000 9
+2020-04-29 01:47:51,988 - Rsna-lb-480-fp16 - INFO - Epoch 0/2
+2020-04-29 01:47:51,988 - Rsna-lb-480-fp16 - INFO - ----------
+Data path : /data/hbcho/rsna-master/data
+Image path : /data/hbcho/rsna-master/../data/proc/
+Selected optimization level O1:  Insert automatic casts around Pytorch functions and Tensor methods.
+
+Defaults for this optimization level are:
+enabled                : True
+opt_level              : O1
+cast_model_type        : None
+patch_torch_functions  : True
+keep_batchnorm_fp32    : None
+master_weights         : None
+loss_scale             : dynamic
+Processing user overrides (additional kwargs that are not None)...
+After processing overrides, optimization options are:
+enabled                : True
+opt_level              : O1
+cast_model_type        : None
+patch_torch_functions  : True
+keep_batchnorm_fp32    : None
+master_weights         : None
+loss_scale             : dynamic
+Warning:  multi_tensor_applier fused unscale kernel is unavailable, possibly because apex was installed without --cuda_ext --cpp_ext. Using Python fallback.  Original ImportError was: ModuleNotFoundError("No module named 'amp_C'",)
+Traceback (most recent call last):
+  File "scripts/trainorig.py", line 331, in <module>
+    model.load_state_dict(torch.load(input_model_file))
+  File "/home/hbcho/anaconda3/envs/torch_110/lib/python3.6/site-packages/torch/serialization.py", line 382, in load
+    f = open(f, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: '/data/hbcho/rsna-master/../scripts/resnext101v03/weights/model_480_epoch0_fold6.bin'
+2020-04-29 01:47:58,161 - Rsna-lstm-0-6-fp16 - INFO - Cuda set up : time 01:47:58.161825
+2020-04-29 01:47:58,244 - Rsna-lstm-0-6-fp16 - INFO - Device : GeForce GTX 1080 Ti
+2020-04-29 01:47:58,244 - Rsna-lstm-0-6-fp16 - INFO - Cuda available : True
+2020-04-29 01:47:58,244 - Rsna-lstm-0-6-fp16 - INFO - Cuda n_gpus : 5
+2020-04-29 01:47:58,244 - Rsna-lstm-0-6-fp16 - INFO - Load params : time 01:47:58.244682
+2020-04-29 01:47:58,244 - Rsna-lstm-0-6-fp16 - INFO - seed                1234
+2020-04-29 01:47:58,244 - Rsna-lstm-0-6-fp16 - INFO - fold                6
+2020-04-29 01:47:58,244 - Rsna-lstm-0-6-fp16 - INFO - nbags               12
+2020-04-29 01:47:58,244 - Rsna-lstm-0-6-fp16 - INFO - epochs              12
+2020-04-29 01:47:58,245 - Rsna-lstm-0-6-fp16 - INFO - batchsize           4
+2020-04-29 01:47:58,245 - Rsna-lstm-0-6-fp16 - INFO - rootpath            
+2020-04-29 01:47:58,245 - Rsna-lstm-0-6-fp16 - INFO - imgpath             data/mount/512X512X6/
+2020-04-29 01:47:58,245 - Rsna-lstm-0-6-fp16 - INFO - workpath            ../scripts/resnext101v03
+2020-04-29 01:47:58,245 - Rsna-lstm-0-6-fp16 - INFO - weightsname         pytorch_model.bin
+2020-04-29 01:47:58,245 - Rsna-lstm-0-6-fp16 - INFO - lr                  0.00001
+2020-04-29 01:47:58,245 - Rsna-lstm-0-6-fp16 - INFO - logmsg              Rsna-lstm-0-6-fp16
+2020-04-29 01:47:58,245 - Rsna-lstm-0-6-fp16 - INFO - size                480
+2020-04-29 01:47:58,245 - Rsna-lstm-0-6-fp16 - INFO - globalepoch         0
+2020-04-29 01:47:58,245 - Rsna-lstm-0-6-fp16 - INFO - loadcsv             F
+2020-04-29 01:47:58,245 - Rsna-lstm-0-6-fp16 - INFO - lstm_units          2048
+2020-04-29 01:47:58,245 - Rsna-lstm-0-6-fp16 - INFO - dropout             0.3
+2020-04-29 01:47:58,245 - Rsna-lstm-0-6-fp16 - INFO - decay               0.0
+2020-04-29 01:47:58,245 - Rsna-lstm-0-6-fp16 - INFO - lrgamma             0.95
+2020-04-29 01:47:58,245 - Rsna-lstm-0-6-fp16 - INFO - ttahflip            F
+2020-04-29 01:47:58,245 - Rsna-lstm-0-6-fp16 - INFO - ttatranspose        F
+2020-04-29 01:47:58,245 - Rsna-lstm-0-6-fp16 - INFO - datapath            data
+2020-04-29 01:47:58,246 - Rsna-lstm-0-6-fp16 - INFO - Cuda set up : time 01:47:58.246321
+Traceback (most recent call last):
+  File "scripts/trainlstm.py", line 207, in <module>
+    trndf = loadobj(os.path.join(path_emb, 'loader_trn_size{}_fold{}_ep{}'.format(SIZE, fold, GLOBALEPOCH))).dataset.data
+  File "scripts/utils.py", line 75, in loadobj
+    with open(file, 'rb') as handle:
+FileNotFoundError: [Errno 2] No such file or directory: '../scripts/resnext101v03/loader_trn_size480_fold6_ep0'
+2020-04-29 01:48:30,146 - Rsna-lstm-1-6-fp16 - INFO - Cuda set up : time 01:48:30.146333
+2020-04-29 01:48:30,253 - Rsna-lstm-1-6-fp16 - INFO - Device : GeForce GTX 1080 Ti
+2020-04-29 01:48:30,253 - Rsna-lstm-1-6-fp16 - INFO - Cuda available : True
+2020-04-29 01:48:30,253 - Rsna-lstm-1-6-fp16 - INFO - Cuda n_gpus : 5
+2020-04-29 01:48:30,253 - Rsna-lstm-1-6-fp16 - INFO - Load params : time 01:48:30.253912
+2020-04-29 01:48:30,254 - Rsna-lstm-1-6-fp16 - INFO - seed                1234
+2020-04-29 01:48:30,254 - Rsna-lstm-1-6-fp16 - INFO - fold                6
+2020-04-29 01:48:30,254 - Rsna-lstm-1-6-fp16 - INFO - nbags               12
+2020-04-29 01:48:30,254 - Rsna-lstm-1-6-fp16 - INFO - epochs              12
+2020-04-29 01:48:30,254 - Rsna-lstm-1-6-fp16 - INFO - batchsize           4
+2020-04-29 01:48:30,254 - Rsna-lstm-1-6-fp16 - INFO - rootpath            
+2020-04-29 01:48:30,254 - Rsna-lstm-1-6-fp16 - INFO - imgpath             data/mount/512X512X6/
+2020-04-29 01:48:30,254 - Rsna-lstm-1-6-fp16 - INFO - workpath            ../scripts/resnext101v03
+2020-04-29 01:48:30,254 - Rsna-lstm-1-6-fp16 - INFO - weightsname         pytorch_model.bin
+2020-04-29 01:48:30,254 - Rsna-lstm-1-6-fp16 - INFO - lr                  0.00001
+2020-04-29 01:48:30,254 - Rsna-lstm-1-6-fp16 - INFO - logmsg              Rsna-lstm-1-6-fp16
+2020-04-29 01:48:30,254 - Rsna-lstm-1-6-fp16 - INFO - size                480
+2020-04-29 01:48:30,254 - Rsna-lstm-1-6-fp16 - INFO - globalepoch         1
+2020-04-29 01:48:30,254 - Rsna-lstm-1-6-fp16 - INFO - loadcsv             F
+2020-04-29 01:48:30,254 - Rsna-lstm-1-6-fp16 - INFO - lstm_units          2048
+2020-04-29 01:48:30,255 - Rsna-lstm-1-6-fp16 - INFO - dropout             0.3
+2020-04-29 01:48:30,255 - Rsna-lstm-1-6-fp16 - INFO - decay               0.0
+2020-04-29 01:48:30,255 - Rsna-lstm-1-6-fp16 - INFO - lrgamma             0.95
+2020-04-29 01:48:30,255 - Rsna-lstm-1-6-fp16 - INFO - ttahflip            F
+2020-04-29 01:48:30,255 - Rsna-lstm-1-6-fp16 - INFO - ttatranspose        F
+2020-04-29 01:48:30,255 - Rsna-lstm-1-6-fp16 - INFO - datapath            data
+2020-04-29 01:48:30,255 - Rsna-lstm-1-6-fp16 - INFO - Cuda set up : time 01:48:30.255743
+Traceback (most recent call last):
+  File "scripts/trainlstm.py", line 207, in <module>
+    trndf = loadobj(os.path.join(path_emb, 'loader_trn_size{}_fold{}_ep{}'.format(SIZE, fold, GLOBALEPOCH))).dataset.data
+  File "scripts/utils.py", line 75, in loadobj
+    with open(file, 'rb') as handle:
+FileNotFoundError: [Errno 2] No such file or directory: '../scripts/resnext101v03/loader_trn_size480_fold6_ep1'
+2020-04-29 01:49:00,766 - Rsna-lstm-2-6-fp16 - INFO - Cuda set up : time 01:49:00.766329
+2020-04-29 01:49:00,944 - Rsna-lstm-2-6-fp16 - INFO - Device : GeForce GTX 1080 Ti
+2020-04-29 01:49:00,945 - Rsna-lstm-2-6-fp16 - INFO - Cuda available : True
+2020-04-29 01:49:00,945 - Rsna-lstm-2-6-fp16 - INFO - Cuda n_gpus : 5
+2020-04-29 01:49:00,945 - Rsna-lstm-2-6-fp16 - INFO - Load params : time 01:49:00.945318
+2020-04-29 01:49:00,945 - Rsna-lstm-2-6-fp16 - INFO - seed                1234
+2020-04-29 01:49:00,945 - Rsna-lstm-2-6-fp16 - INFO - fold                6
+2020-04-29 01:49:00,945 - Rsna-lstm-2-6-fp16 - INFO - nbags               12
+2020-04-29 01:49:00,945 - Rsna-lstm-2-6-fp16 - INFO - epochs              12
+2020-04-29 01:49:00,945 - Rsna-lstm-2-6-fp16 - INFO - batchsize           4
+2020-04-29 01:49:00,945 - Rsna-lstm-2-6-fp16 - INFO - rootpath            
+2020-04-29 01:49:00,946 - Rsna-lstm-2-6-fp16 - INFO - imgpath             data/mount/512X512X6/
+2020-04-29 01:49:00,946 - Rsna-lstm-2-6-fp16 - INFO - workpath            ../scripts/resnext101v03
+2020-04-29 01:49:00,946 - Rsna-lstm-2-6-fp16 - INFO - weightsname         pytorch_model.bin
+2020-04-29 01:49:00,946 - Rsna-lstm-2-6-fp16 - INFO - lr                  0.00001
+2020-04-29 01:49:00,946 - Rsna-lstm-2-6-fp16 - INFO - logmsg              Rsna-lstm-2-6-fp16
+2020-04-29 01:49:00,946 - Rsna-lstm-2-6-fp16 - INFO - size                480
+2020-04-29 01:49:00,946 - Rsna-lstm-2-6-fp16 - INFO - globalepoch         2
+2020-04-29 01:49:00,947 - Rsna-lstm-2-6-fp16 - INFO - loadcsv             F
+2020-04-29 01:49:00,947 - Rsna-lstm-2-6-fp16 - INFO - lstm_units          2048
+2020-04-29 01:49:00,947 - Rsna-lstm-2-6-fp16 - INFO - dropout             0.3
+2020-04-29 01:49:00,947 - Rsna-lstm-2-6-fp16 - INFO - decay               0.0
+2020-04-29 01:49:00,947 - Rsna-lstm-2-6-fp16 - INFO - lrgamma             0.95
+2020-04-29 01:49:00,947 - Rsna-lstm-2-6-fp16 - INFO - ttahflip            F
+2020-04-29 01:49:00,947 - Rsna-lstm-2-6-fp16 - INFO - ttatranspose        F
+2020-04-29 01:49:00,947 - Rsna-lstm-2-6-fp16 - INFO - datapath            data
+2020-04-29 01:49:00,948 - Rsna-lstm-2-6-fp16 - INFO - Cuda set up : time 01:49:00.948350
+Traceback (most recent call last):
+  File "scripts/trainlstm.py", line 207, in <module>
+    trndf = loadobj(os.path.join(path_emb, 'loader_trn_size{}_fold{}_ep{}'.format(SIZE, fold, GLOBALEPOCH))).dataset.data
+  File "scripts/utils.py", line 75, in loadobj
+    with open(file, 'rb') as handle:
+FileNotFoundError: [Errno 2] No such file or directory: '../scripts/resnext101v03/loader_trn_size480_fold6_ep2'
