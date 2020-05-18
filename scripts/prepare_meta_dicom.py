@@ -80,16 +80,22 @@ def apply_window_policy(image):
 
 def convert_dicom_to_jpg(name):
     try:
+        
         data = f.read(name)
         dirtype = 'train' if 'train' in name else 'test'
         imgnm = (name.split('/')[-1]).replace('.dcm', '')
-        dicom = pydicom.dcmread(DicomBytesIO(data))
-        image = dicom.pixel_array
-        image = rescale_image(image, rescaledict['RescaleSlope'][imgnm], rescaledict['RescaleIntercept'][imgnm])
-        image = apply_window_policy(image)
-        image -= image.min((0,1))
-        image = (255*image).astype(np.uint8)
-        cv2.imwrite(os.path.join(PATHPROC, imgnm)+'.jpg', image)
+    #     print(PATHPROC+"/"+ imgnm+'.jpg')
+        if os.path.exists(PATHPROC +"/"+  imgnm + '.jpg'):
+    #             return
+            print(imgnm+".jpg is existed." )
+        else:
+            dicom = pydicom.dcmread(DicomBytesIO(data))
+            image = dicom.pixel_array
+            image = rescale_image(image, rescaledict['RescaleSlope'][imgnm], rescaledict['RescaleIntercept'][imgnm])
+            image = apply_window_policy(image)
+            image -= image.min((0,1))
+            image = (255*image).astype(np.uint8)
+            cv2.imwrite(os.path.join(PATHPROC, imgnm)+'.jpg', image)
     except:
         logger.info(name)
         
@@ -115,20 +121,26 @@ def generate_df(base, files):
     
     return df
 
-DATAPATH = '../data'
-TRAIN_DIR = os.path.join(DATAPATH, 'raw/stage_2_train')
-TEST_DIR = os.path.join(DATAPATH, 'raw/stage_2_test')
+
+
+DATAPATH = '../data/'
+TRAIN_DIR = os.path.join(DATAPATH, 'raw/sample_png/stage_2_train')
+TEST_DIR = os.path.join(DATAPATH, 'raw/sample_png/stage_2_test')
 PATHPROC = os.path.join(DATAPATH, 'proc')
 
-logger.info('Create test meta files')
-test_files = os.listdir(TEST_DIR)
-test_df = generate_df(TEST_DIR, test_files)
-test_df.to_csv(os.path.join(DATAPATH, 'test_metadata.csv'))
 
-logger.info('Create train meta files')
-train_files = os.listdir( TRAIN_DIR)
-train_df = generate_df(TRAIN_DIR, train_files)
-train_df.to_csv(os.path.join(DATAPATH, 'train_metadata.csv'))
+
+# logger.info('Create test meta files')
+# test_files = os.listdir(TEST_DIR)
+# test_df = generate_df(TEST_DIR, test_files)
+# test_df.to_csv(os.path.join(DATAPATH, 'test_metadata.csv'))
+
+# logger.info('Create train meta files')
+# train_files = os.listdir(TRAIN_DIR)
+# train_df = generate_df(TRAIN_DIR, train_files)
+# train_df.to_csv(os.path.join(DATAPATH, 'train_metadata.csv'))
+
+
 
 logger.info('Load meta files')
 trnmdf = pd.read_csv(os.path.join(DATAPATH, 'train_metadata.csv'))
@@ -141,8 +153,13 @@ logger.info('Test  meta shape {} {}'.format(*tstmdf.shape))
 mdf = pd.concat([trnmdf, tstmdf], 0)
 rescaledict = mdf.set_index('SOPInstanceUID')[['RescaleSlope', 'RescaleIntercept']].to_dict()
 
+if not os.path.exists(PATHPROC):
+    os.mkdir(PATHPROC)
+    
 logger.info('Create windowed images')
+# with zipfile.ZipFile(os.path.join(DATAPATH, "raw/rsna-intracranial-hemorrhage-detection.zip"), "r") as f:
 with zipfile.ZipFile(os.path.join(DATAPATH, "raw/rsna-intracranial-hemorrhage-detection.zip"), "r") as f:
     for t, name in enumerate(tqdm(f.namelist())):
+#     for t, name in enumerate(f.namelist()):
+#         print(name)
         convert_dicom_to_jpg(name)
-
